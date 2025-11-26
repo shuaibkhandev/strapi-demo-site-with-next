@@ -42,6 +42,9 @@ export default async function fetchContentType(
       queryParams.status = 'draft';
     }
 
+
+    
+
     // Construct the full URL for the API request
     const url = new URL(`api/${contentType}`, process.env.NEXT_PUBLIC_API_URL);
 
@@ -54,6 +57,7 @@ export default async function fetchContentType(
       },
     });
 
+    
     if (!response.ok) {
       console.error(
         `Failed to fetch data from Strapi (url=${url.toString()}, status=${response.status})`
